@@ -1,0 +1,88 @@
+{
+    "validation.unique": "O :attribute já se encontra registado",
+    "validation.min.string": "O campo :attribute tem de ter :min caracteres",
+    "validation.max.string": "O campo :attribute tem de ter :min caracteres",
+    "validation.email": "O teu email está invalido",
+    "validation.before": "Tens de ter no minimo 13 anos para te registares",
+    "validation.required": "Ups, O campo :attribute é obrigatório",
+    "validation.attributes" : {
+        "username": "nome de utilizador",
+        "email": "email",
+        "birthDate": "data de nascimento",
+        "code": "codigo",
+        "passwordVerify": "confirmação de password",
+        "description": "descrição",
+        "name": "nome"
+    },
+
+    "createAccount.email.subject": "Por favor confirme o seu email",
+    "createAccount.email.body1":":name, Bem vindo ao IFrame, par§a teres a tua conta ativa só falta um pequeno passo, confirmar o teu email.",
+    "createAccount.email.body2":"Para confirmar é só usar este código: :code",
+    "createAccount.email.body3":"O codigo só é valido por 1 hora",
+    "createAccount.email.body4":"Não se inscreveu no IFrame? Clique aqui.",
+    "createAccount.success":"Conta criada com sucesso, por favor verifica o seu email.",
+    "createAccount.error.passwordDifferent":"As passwords introduzidas não são iguais.",
+    "createAccount.error.nullPasswords":"Por favor indica uma password para proteger a tua conta.",
+    "createAccount.error.invalidCode": "O codigo que inseriste é invalido ou já expirou",
+    "createAccount.success.activate": "Parabens a tua conta foi ativada com sucesso. Bem vindo ao IFrame",
+
+    "newActivationCode.email.subject": "Novo codigo de ativação",
+    "newActivationCode.email.body1": "Olá :name, foi solicitado um novo codigo de ativação para a tua conta do IFrame",
+    "newActivationCode.email.body2":"Para ativares a conta coloca este código no IFrame: :code",
+    "newActivationCode.email.body3":"O codigo só é valido por 1 hora",
+    "newActivationCode.email.body4":"Não se inscreveu no IFrame? Clique aqui.",
+    "newActivationCode.success":"Foi enviado um novo código de ativação para o teu email.",
+    "newActivationCode.error.emailInvalid":"Ups, o email que introduziste não está registado no nosso sistema, Não queres aproveitar e criar uma conta no IFrame?",
+    "newActivationCode.error.accountValid":"Ups, o email que indicaste já se encontra validado, não queres fazer login?",
+
+    "recoveryPassword.error.emailInvalid": "Ups, o email que introduziste não está registado no nosso sistema",
+    "recoveryPassword.email.subject": "Recuperação de password",
+    "recoveryPassword.email.body1":"Olá :name, Recebemos um pedido de recuperação de password para a tua conta do IFrame.",
+    "recoveryPassword.email.body2":"Para continuar com o processo clica no link abaixo",
+    "recoveryPassword.email.body3":"Mas atenção o link só é valido por 1 hora",
+    "recoveryPassword.email.body4":"Se não solicitaste esta recuperação recomendamos a apagar o email.",
+    "recoveryPassword.email.btn":"Recuperar conta",
+    "recoveryPassword.success":"Por favor verifica o teu email, que receberas um link para completar o processo.",
+    "recoveryPasswordChange.error":"O link indicado não é valido.",
+    "recoveryPasswordChange.success":"A password foi alterada com sucesso.",
+
+    "login.error.notFound": "Os dados que inserieste estão invalidos",
+    "login.error.passwordWrong": "A password não está valida",
+    "login.error.accountNotVerified": "Ainda não verificaste a tua conta.",
+    "login.error.success": "Bem vindo de volta :name",
+
+    "error.401": "Ups, algo de errado aconteceu, não devias estar aqui",
+    "error.sessionDie": "A tua sessão expirou",
+
+    "editAccount.error.username": "O nome de utilizador escolhido já não se encontra disponivel",
+    "editAccount.success": "A tua conta foi editada com sucesso",
+    "editAccount.setPhoto.success": "Imagem de perfil alterada com sucesso",
+    "editAccount.setPhoto.error": "Ocurreu um erro a definir a tua nova foto de perfil",
+    "editAccount.remove.success": "Foto de perfil removida com sucesso",
+
+    "destroySessions": "Todas as sessões menos esta foram terminadas",
+    "delete": "A tua conta foi apagada com muita pena nossa",
+
+    "device.unknown.browser": "Navegador desconhecido",
+    "device.unknown.system": "Sistema operativo desconhecido",
+    "device.computer.device": "Computador",
+    "device.mobile.device": "smartphone",
+    "device.disable.notFound": "O dispositivo indicado não foi encontrado",
+    "device.disable.success": "O dispositivo foi desativado com sucesso",
+    "device.enabled.success": "O dispositivo foi ativado com sucesso",
+
+    "block.success": "O utilizador :user foi bloqueado",
+    "unblock.success": "O utilizador :user foi desbloqueado",
+    "block.error.userNotFound": "O utilizador não foi encontrado",
+
+    "user.notFound": "O utilizador não existe",
+    "user.follow": "Pedido solicitado com sucesso",
+    "user.follow.accepted": "Pedido aceite com sucesso",
+    "user.follow.removed": "Pedido removido com sucesso",
+    "user.follow.error": "Pedido não encontrado",
+    "user.follow.stop": "Deixou de seguir",
+    "sync.instagram.error.invalid": "Ocurreu um erro a registar a sincronização, tenta novamente mais tarde",
+    "sync.instagram.success": "A tua conta já está preparada para sincronizar com o instagram"
+
+
+}
