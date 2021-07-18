@@ -46,10 +46,10 @@ class DeviceId extends Model
     }
 
     function getCreatedAtAttribute(): string {
-        return Carbon::parse($this->attributes['created_at'], 'UTC')->timezone(config('app.timezone'))->format('Y-m-d h:i:s');
+        return Carbon::parse($this->attributes['created_at'], 'UTC')->timezone(config('app.timezone'))->format('Y-m-d H:i:s');
     }
 
     function getUpdatedAtAttribute(): string {
-        return Carbon::parse($this->attributes['updated_at'], 'UTC')->timezone(config('app.timezone'))->format('Y-m-d h:i:s');
+        return Carbon::parse($this->attributes['updated_at'], 'UTC')->timezone(config('app.timezone'))->format('Y-m-d H:i:s');
     }
 }

@@ -19,7 +19,7 @@ class Language
      */
     public function handle(Request $request, Closure $next)
     {
-        $timezone=$request->header('frame-tz', 'UTC');
+        $timezone=$request->header('iframe-tz', 'UTC');
 
         if(in_array($timezone, DateTimeZone::listIdentifiers())) {
             Config::set('app.timezone', $timezone);

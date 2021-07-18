@@ -28,7 +28,13 @@ class Authentication
             'account/photo/{username}',
             'account/profile/{username}',
             'account/new/verify',
-            'publication/media/{id}/{auth?}'
+            'publication/media/{id}/{auth?}',
+            'publication/media/thumbnail/{id}/{auth?}',
+            'sync/twitter/url',
+            'sync/instagram/url',
+            'sync/instagram',
+            'sync/twitter',
+            'sync/saveSession/{auth}/{route}',
         );
 
         $route=explode('/', $request->route()->uri());

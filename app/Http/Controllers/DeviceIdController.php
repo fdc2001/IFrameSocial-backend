@@ -13,12 +13,13 @@ class DeviceIdController extends Controller
 {
     public static function verifyDevice($device) {
         #dd($device);
-        if($device->browser===DeviceInfo::get_browsers() && $device->system===DeviceInfo::get_os() && $device->device===DeviceInfo::get_device()){
+        if ($device->browser === DeviceInfo::get_browsers() && $device->system === DeviceInfo::get_os() && $device->device === DeviceInfo::get_device()) {
             $device->touch();
             return true;
-        }else{
+        } else {
             return false;
         }
+
     }
 
     public static function getDevice($token) {
@@ -55,7 +56,7 @@ class DeviceIdController extends Controller
     public function getLoginDevices(Request $request) {
         $user = $request->get('user');
         $data=array();
-        $data['data']=DeviceId::where('user', '=', $user->id)->get();
+        $data['data']=DeviceId::where('user', '=', $user->id)->orderBy('updated_at', 'desc')->get();
         $data['error']=array();
         $data['code']=0;
         return response()->json($data);

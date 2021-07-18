@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Http\Controllers\InstagramController;
+use App\Http\Controllers\TwitterController;
 use App\Models\ConfigSocial;
 use App\Models\ConfigSocialUser;
 use Illuminate\Console\Command;
@@ -50,6 +51,13 @@ class SyncSocial extends Command
                 case 1:{
                     $configuration = ConfigSocial::where('id', '=', 1)->first();
                     InstagramController::sync($row, $configuration);
+                    $row->lastSync=now();
+                    $row->save();
+                    break;
+                }
+                case 2:{
+                    $configuration = ConfigSocial::where('id', '=', 2)->first();
+                    TwitterController::sync($row, $configuration);
                     $row->lastSync=now();
                     $row->save();
                     break;

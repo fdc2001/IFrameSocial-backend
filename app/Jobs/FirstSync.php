@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Http\Controllers\InstagramController;
+use App\Http\Controllers\TwitterController;
 use App\Models\ConfigSocial;
 use App\Models\ConfigSocialUser;
 use Illuminate\Bus\Queueable;
@@ -44,6 +45,11 @@ class FirstSync implements ShouldQueue
             InstagramController::sync($configUser, $configuration);
             $configUser->lastSync=now();
             $configUser->save();
+        }else if($configuration->name === "Twitter"){
+            TwitterController::sync($configUser, $configuration);
+            $configUser->lastSync=now();
+            $configUser->save();
         }
     }
 }
+

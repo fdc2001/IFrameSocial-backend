@@ -19,7 +19,7 @@ class CreateConfigSocialUsersTable extends Migration
             $table->foreignId('socialID')->references('id')->on('config_socials')->onDelete('cascade');
             $table->longText('accessToken')->nullable();
             $table->longText('userID')->nullable();
-            $table->dateTime('expireDate');
+            $table->dateTime('expireDate')->nullable();
             $table->boolean('automatePublications');
             $table->boolean('automateRenewAccess');
             $table->dateTime('lastSync')->nullable();

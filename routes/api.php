@@ -50,6 +50,7 @@ Route::prefix('{locale}')->group(function () {
             Route::get('', 'PublicationController@myPublications');
             Route::get('/feed', 'PublicationController@feed');
             #Route::get('/media/getTumbnail/{id}/{auth?}', 'PublicationController@getMedia');
+            Route::get('/media/thumbnail/{id}/{auth?}', 'PublicationController@getMediaThumb');
             Route::get('/media/{id}/{auth?}', 'PublicationController@getMedia');
         });
 
@@ -64,9 +65,16 @@ Route::prefix('{locale}')->group(function () {
         });
 
         Route::prefix('sync')->group(function (){
-            Route::post('instagram', 'InstagramController@register');
+            Route::get('saveSession/{auth}/{route}', 'SocialController@saveSession');
+            Route::get('instagram', 'InstagramController@register');
+            Route::get('instagram/url', 'InstagramController@redirectToLogin')->name("instagram");
+            Route::get('twitter', 'TwitterController@register');
+            Route::get('twitter/url', 'TwitterController@redirectToLogin')->name("twitter");
+
+            Route::get('configs', 'SocialController@getSocialsConfig');
         });
 
     });
 
 });
+

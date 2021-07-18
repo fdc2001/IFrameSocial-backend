@@ -31,7 +31,9 @@ class DeviceInfo
     }
 
     public static function get_os(){
-
+        if(Request()->header('iframe-OS')!==null){
+            return Request()->header('iframe-OS');
+        }
         $user_agent = self::get_user_agent();
         $os_platform = "Unknown OS Platform";
         $os_array = array(
@@ -69,7 +71,9 @@ class DeviceInfo
     }
 
     public static function get_browsers(): string {
-
+        if(Request()->header('iframe-type')!==null){
+            return Request()->header('iframe-type');
+        }
         $user_agent= self::get_user_agent();
 
         $browser = "Unknown Browser";
@@ -99,6 +103,10 @@ class DeviceInfo
 
     public static function get_device(): string {
 
+
+        if(Request()->header('iframe-device')!==null){
+            return Request()->header('iframe-device');
+        }
         $tablet_browser = 0;
         $mobile_browser = 0;
 

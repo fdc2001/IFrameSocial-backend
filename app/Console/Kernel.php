@@ -25,7 +25,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
-        $schedule->call('SyncSocial')->everyTenMinutes()->runInBackground();
+        $schedule->call('SyncSocial')->everyMinute();
+        #$schedule->call('SyncSocial')->everyTenMinutes()->runInBackground();
         $schedule->call('RenewAccess')->daily();
     }
 

@@ -17,7 +17,7 @@ class CreateConfigSocialsTable extends Migration
             $table->id();
             $table->string("name");
             $table->longText("appID");
-            $table->longText("appSecrete");
+            $table->longText("appSecret");
             $table->timestamps();
         });
     }

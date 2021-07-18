@@ -1,0 +1,3 @@
+php artisan schedule:work
+php artisan queue:listen --timeout=0
+php artisan serve
