@@ -74,6 +74,13 @@ Route::prefix('{locale}')->group(function () {
             Route::get('configs', 'SocialController@getSocialsConfig');
         });
 
+        Route::prefix('pet')->group(function (){
+            Route::get('/myList', 'PetController@getMyListPets')->name("Listagem de animais do utilizador");
+            Route::get('/{petID}', 'PetController@getDetailsPet')->name("Detalhes do animal");
+            Route::get('/background/{styleID}', 'PetController@getBackground')->name("Background of animal");
+
+        });
+
     });
 
 });

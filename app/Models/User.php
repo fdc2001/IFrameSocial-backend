@@ -86,6 +86,14 @@ class User extends Authenticatable
         return $this->hasMany(Publication::class, 'user', 'id')->where('status', '=', 1);
     }
 
+    public function pets(): HasMany {
+        return $this->hasMany(PetUser::class, 'user_id', 'id')->with(['details']);
+    }
+
+    function getPetsAttribute(){
+        return $this->pets()->get();
+    }
+
     function getTotalPublicationsAttribute(){
         return $this->publications()->get()->count();
     }

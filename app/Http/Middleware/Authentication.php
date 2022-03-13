@@ -35,6 +35,7 @@ class Authentication
             'sync/instagram',
             'sync/twitter',
             'sync/saveSession/{auth}/{route}',
+            'pet/background/{styleID}',
         );
 
         $route=explode('/', $request->route()->uri());

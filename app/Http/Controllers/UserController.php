@@ -12,6 +12,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
@@ -22,9 +23,13 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class UserController extends Controller
 {
+
+
+
     public function createUser(Request $request): JsonResponse {
         $data=$request->get('data');
         $data=Arr::only($data, array('email', 'name', 'birthDate', 'password', 'passwordVerify', 'username'));
+
         $validator = Validator::make(
             $data,
             [
@@ -35,6 +40,7 @@ class UserController extends Controller
                 'birthDate' => 'required|date|before:-13 years',
             ]
         );
+
         if($validator->fails()) {
             $data=array();
             $data['data']=array();
@@ -380,7 +386,7 @@ class UserController extends Controller
     public function me(Request $request): JsonResponse {
         $user= $request->get('user');
         $data=array();
-        $data['data']=$user->append('totalFollowers', 'totalFollowings', 'totalPublications');
+        $data['data']=$user->append('totalFollowers', 'totalFollowings', 'totalPublications','pets');
         $data['error']=array();
         $data['code']=0;
         return response()->json($data);

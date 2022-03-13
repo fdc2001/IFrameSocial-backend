@@ -11,6 +11,9 @@ use Illuminate\Support\Str;
 
 class DeviceIdController extends Controller
 {
+
+
+
     public static function verifyDevice($device) {
         #dd($device);
         if ($device->browser === DeviceInfo::get_browsers() && $device->system === DeviceInfo::get_os() && $device->device === DeviceInfo::get_device()) {

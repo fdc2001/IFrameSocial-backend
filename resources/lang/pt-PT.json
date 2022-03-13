@@ -85,7 +85,9 @@
     "sync.instagram.success": "A tua conta já está preparada para sincronizar com o instagram",
 
     "sync.twitter.error.invalid": "Ocurreu um erro a registar a sincronização, tenta novamente mais tarde",
-    "sync.twitter.success": "A tua conta já está preparada para sincronizar com o twitter"
+    "sync.twitter.success": "A tua conta já está preparada para sincronizar com o twitter",
+
+    "pet.error.notFound": "O animal não existe"
 
 
 }
